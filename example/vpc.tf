@@ -6,6 +6,10 @@ provider aws {
 module "vpc" {
   source = "github.com/k-saiki/terraoform-aws-vpc-3tier"
 
+  providers = {
+    aws = "aws"
+  }
+
   name                 = "system-dev"
   cidr                 = "10.0.0.0/16"
   instance_tenancy     = "default"
