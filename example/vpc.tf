@@ -1,3 +1,8 @@
+provider aws {
+  version = "1.11.0"
+  region  = "ap-northeast-1"
+}
+
 module "vpc" {
   source = "github.com/k-saiki/terraoform-aws-vpc-3tier"
 
