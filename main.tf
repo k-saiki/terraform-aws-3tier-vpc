@@ -169,14 +169,6 @@ resource "aws_route" "protected_nat_gateway" {
   nat_gateway_id         = "${element(aws_nat_gateway.this.*.id, count.index)}"
 }
 
-resource "aws_route" "private_nat_gateway" {
-  count = "${var.enable_nat_gateway ? length(var.private_subnets) : 0}"
-
-  route_table_id         = "${element(aws_route_table.private.*.id, count.index)}"
-  destination_cidr_block = "0.0.0.0/0"
-  nat_gateway_id         = "${element(aws_nat_gateway.this.*.id, count.index)}"
-}
-
 ##########################
 # Route table association
 ##########################
