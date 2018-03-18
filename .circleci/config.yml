@@ -1,0 +1,22 @@
+version: 2
+
+jobs:
+  build:
+    docker:
+      - image: hashicorp/terraform:0.11.3
+    environment:
+      TZ: /usr/share/zoneinfo/Asia/Tokyo
+    steps:
+      - checkout
+      - run:
+          name: terraform init
+          command: terraform init
+      - run:
+          name: terraform validate
+          command: terraform validate -check-variables=false
+
+workflows:
+  version: 2
+  build:
+    jobs:
+      - build
