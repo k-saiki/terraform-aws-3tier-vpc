@@ -1,4 +1,6 @@
 # terraform-aws-3tier-vpc
+[![CircleCI](https://circleci.com/gh/k-saiki/terraoform-aws-3tier-vpc.svg?style=svg)](https://circleci.com/gh/k-saiki/terraoform-aws-3tier-vpc)
+
 Terraform module to create 3 tier subnets VPC on AWS.
 
 ## Usage
