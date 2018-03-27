@@ -3,7 +3,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: hashicorp/terraform:0.11.3
+      - image: hashicorp/terraform:0.11.5
     environment:
       TZ: /usr/share/zoneinfo/Asia/Tokyo
     steps:
