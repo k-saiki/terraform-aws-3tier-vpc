@@ -4,7 +4,7 @@ provider aws {
 }
 
 module "vpc" {
-  source = "github.com/k-saiki/terraoform-aws-vpc-3tier"
+  source = "github.com/k-saiki/terraform-aws-vpc-3tier"
 
   providers = {
     aws = "aws"
