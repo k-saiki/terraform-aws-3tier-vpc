@@ -1,5 +1,5 @@
 # terraform-aws-3tier-vpc
-[![CircleCI](https://circleci.com/gh/k-saiki/terraoform-aws-3tier-vpc.svg?style=svg)](https://circleci.com/gh/k-saiki/terraoform-aws-3tier-vpc)
+[![CircleCI](https://circleci.com/gh/k-saiki/terraform-aws-3tier-vpc.svg?style=svg)](https://circleci.com/gh/k-saiki/terraform-aws-3tier-vpc)
 
 Terraform module to create 3 tier subnets VPC on AWS.
 
@@ -11,7 +11,7 @@ provider aws {
 }
 
 module "vpc" {
-  source = "github.com/k-saiki/terraoform-aws-vpc-3tier"
+  source = "github.com/k-saiki/terraform-aws-vpc-3tier"
 
   providers = {
     aws = "aws"
